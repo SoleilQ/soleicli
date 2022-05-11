@@ -1,6 +1,3 @@
-import Koa, { Context } from "koa";
-import Router from "koa-router";
-import Static from "koa-static";
 import express from "express";
 import path from "path";
 import fs from "fs";
@@ -20,7 +17,6 @@ import { generateHtml } from "./html";
 
 export const dev = async () => {
   const app = express();
-  const router = new Router();
   const port = await portfinder.getPortPromise({
     port: DEFAULT_PORT,
   });
