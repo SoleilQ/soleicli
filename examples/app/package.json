@@ -9,14 +9,15 @@
   },
   "dependencies": {
     "@alita/flow": "3.0.0-beta.5",
+    "@soleijs/keepalive": "workspace:*",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
+    "antd-mobile-icons": "^0.2.2",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-router": "^6.3.0",
     "react-router-dom": "^6.3.0",
-    "solei": "workspace:*",
-    "@soleijs/keepalive": "workspace:*"
+    "solei": "workspace:*"
   },
   "keywords": [],
   "author": "",

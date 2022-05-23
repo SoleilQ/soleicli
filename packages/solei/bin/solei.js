@@ -16,12 +16,11 @@ program.command('help')
   .description('帮助命令')
   .action(function (name, other) {
     console.log(`
-这是solei
-支持的命令:
-version, -v,-V 输出当前框架的版本
-help,-h 输出帮助程序
-Example call:
-  $ solei <command> --help`)
+这是solei支持的命令:
+  version, -v,-V 输出当前框架的版本
+  help,-h 输出帮助程序
+  Example call:
+    solei <command> --help`)
   });
 
 program.command('dev').description('框架开发命令').action(function () {

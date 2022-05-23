@@ -25,38 +25,41 @@ __export(html_exports, {
   generateHtml: () => generateHtml
 });
 module.exports = __toCommonJS(html_exports);
-var import_fs = __toESM(require("fs"));
+var import_fs = require("fs");
 var import_path = __toESM(require("path"));
 
 // src/constants.ts
-var DEFAULT_OUTDIR = "www";
+var DEFAULT_OUTDIR = "dist";
 var DEFAULT_FRAMEWORK_NAME = "solei";
 
 // src/html.ts
-var generateHtml = () => {
+var generateHtml = ({ appData, userConfig }) => {
   return new Promise((resolve, reject) => {
+    var _a, _b;
+    const title = (_b = (_a = userConfig.title) != null ? _a : appData.pkg.name) != null ? _b : "Solei";
     const content = `<!DOCTYPE html>
       <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <title>Solei</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, viewport-fit=cover" />
+        <title>${title}</title>
       </head>
       
       <body>
         <div id="solei">
           <span>loading...</span>
         </div>
-        <script src="/${DEFAULT_OUTDIR}/${DEFAULT_FRAMEWORK_NAME}/index.js"><\/script>
+        <script src="/${DEFAULT_OUTDIR}/${DEFAULT_FRAMEWORK_NAME}.js"><\/script>
         <script src="/${DEFAULT_FRAMEWORK_NAME}/client.js"><\/script>
       </body>
       </html>`;
     try {
       const htmlPath = import_path.default.resolve(DEFAULT_OUTDIR, "index.html");
-      import_fs.default.mkdir(import_path.default.dirname(htmlPath), { recursive: true }, (err) => {
+      (0, import_fs.mkdir)(import_path.default.dirname(htmlPath), { recursive: true }, (err) => {
         if (err) {
           reject(err);
         }
-        import_fs.default.writeFileSync(htmlPath, content, "utf-8");
+        (0, import_fs.writeFileSync)(htmlPath, content, "utf-8");
         resolve({});
       });
     } catch (error) {

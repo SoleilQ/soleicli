@@ -6,7 +6,7 @@
   "types": "lib.index.d.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "pnpm build -- --watch"
+    "dev": "pnpm build"
   },
   "publishConfig": {
     "access": "public"

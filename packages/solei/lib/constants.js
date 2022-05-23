@@ -20,28 +20,37 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var constants_exports = {};
 __export(constants_exports, {
   DEFAULT_BUILD_PORT: () => DEFAULT_BUILD_PORT,
+  DEFAULT_CONFIG_FILE: () => DEFAULT_CONFIG_FILE,
   DEFAULT_ENTRY_POINT: () => DEFAULT_ENTRY_POINT,
   DEFAULT_FRAMEWORK_NAME: () => DEFAULT_FRAMEWORK_NAME,
+  DEFAULT_GLOBAL_LAYOUTS: () => DEFAULT_GLOBAL_LAYOUTS,
   DEFAULT_HOST: () => DEFAULT_HOST,
   DEFAULT_OUTDIR: () => DEFAULT_OUTDIR,
   DEFAULT_PLATFORM: () => DEFAULT_PLATFORM,
-  DEFAULT_PORT: () => DEFAULT_PORT
+  DEFAULT_PORT: () => DEFAULT_PORT,
+  DEFAULT_TEMPLATE: () => DEFAULT_TEMPLATE
 });
 module.exports = __toCommonJS(constants_exports);
-var DEFAULT_OUTDIR = "www";
-var DEFAULT_ENTRY_POINT = "src/index.tsx";
+var DEFAULT_OUTDIR = "dist";
+var DEFAULT_ENTRY_POINT = "solei.tsx";
 var DEFAULT_FRAMEWORK_NAME = "solei";
 var DEFAULT_PLATFORM = "browser";
 var DEFAULT_HOST = "127.0.0.1";
 var DEFAULT_PORT = 8888;
 var DEFAULT_BUILD_PORT = 8989;
+var DEFAULT_TEMPLATE = ".solei";
+var DEFAULT_GLOBAL_LAYOUTS = "layouts/index.tsx";
+var DEFAULT_CONFIG_FILE = "config.ts";
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
   DEFAULT_BUILD_PORT,
+  DEFAULT_CONFIG_FILE,
   DEFAULT_ENTRY_POINT,
   DEFAULT_FRAMEWORK_NAME,
+  DEFAULT_GLOBAL_LAYOUTS,
   DEFAULT_HOST,
   DEFAULT_OUTDIR,
   DEFAULT_PLATFORM,
-  DEFAULT_PORT
+  DEFAULT_PORT,
+  DEFAULT_TEMPLATE
 });
